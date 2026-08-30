@@ -9,7 +9,7 @@ def multiplicar(x, y):
 
 def dividir(x, y):
     if y == 0:
-        return "Erro: Não é possível dividir por zero!"
+        return "Erro: Não é possível dividir!"
     return x / y
 
 print("--- Calculadora Simples ---")
