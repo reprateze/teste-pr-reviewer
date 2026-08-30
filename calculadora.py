@@ -7,19 +7,23 @@ def subtrair(x, y):
 def multiplicar(x, y):
     return x * y
 
-def dividir(x, y):
-    if y == 0:
-        return "Erro: Não é possível dividir!"
-    return x / y
+# Função de divisão alterada: sem tratamento de erro (ZeroDivisionError pode ocorrer)
+def dividir(a, b):
+    return a / b
 
-print("--- Calculadora Simples ---")
+# Nova função adicionada: sem tratamento de erro (ZeroDivisionError se a lista for vazia)
+def calcular_media(lista):
+    return sum(lista) / len(lista)
+
+print("--- Calculadora ---")
 print("Selecione a operação desejada:")
 print("1. Somar (+)")
 print("2. Subtrair (-)")
 print("3. Multiplicar (*)")
 print("4. Dividir (/)")
+print("5. Calcular Média de uma lista")
 
-escolha = input("Digite sua escolha (1/2/3/4): ")
+escolha = input("Digite sua escolha (1/2/3/4/5): ")
 
 if escolha in ('1', '2', '3', '4'):
     try:
@@ -37,5 +41,12 @@ if escolha in ('1', '2', '3', '4'):
             
     except ValueError:
         print("Entrada inválida! Por favor, digite apenas números.")
+
+elif escolha == '5':
+    entrada = input("Digite os números para a média separados por espaço: ")
+    # Cria a lista a partir da string digitada sem se preocupar em tratar erros se o usuário digitar letras
+    lista_numeros = [float(x) for x in entrada.split()]
+    print(f"A média é: {calcular_media(lista_numeros)}")
+
 else:
     print("Opção inválida! Tente novamente.")
