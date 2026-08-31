@@ -1,4 +1,9 @@
-def test_validar_numero_aceita_inteiro():
-    from calculadora import validar_numero
+from calculadora import validar_numero
 
-    assert validar_numero(5) == True
+
+def test_validar_numero_aceita_inteiro():
+    assert validar_numero(5) is True
+
+
+def test_validar_numero_rejeita_string():
+    assert validar_numero("abc") is False
