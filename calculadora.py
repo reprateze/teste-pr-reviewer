@@ -51,7 +51,7 @@ if escolha in ('1', '2', '3', '4'):
     except ValueError:
         print("Entrada inválida! Por favor, digite apenas números.")
 else:
-    print("Opção inválida! Tente novamente.")
+    print("Opção inválida! Tente novamente")
 
 def validar_numero(valor):
     return isinstance(valor, (int, float))
