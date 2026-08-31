@@ -39,3 +39,12 @@ if escolha in ('1', '2', '3', '4'):
         print("Entrada inválida! Por favor, digite apenas números.")
 else:
     print("Opção inválida! Tente novamente.")
+
+def validar_numero(valor):
+    return isinstance(valor, (int, float))
+
+
+def calcular_porcentagem(valor, percentual):
+    if not validar_numero(valor) or not validar_numero(percentual):
+        raise TypeError("Valores devem ser numericos")
+    return (valor * percentual) / 100
