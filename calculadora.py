@@ -49,7 +49,7 @@ if escolha in ('1', '2', '3', '4'):
             print(f"Resultado: {num1} / {num2} = {dividir(num1, num2)}")
             
     except ValueError:
-        print("Entrada inválida! Por favor, digite apenas números.")
+        print("Entrada inválida! Por favor, digite apenas números")
 else:
     print("Opção inválida! Tente novamente")
 
