@@ -49,15 +49,15 @@ if escolha in ('1', '2', '3', '4'):
             print(f"Resultado: {num1} / {num2} = {dividir(num1, num2)}")
             
     except ValueError:
-        print("Entrada inválida! Por favor, digite apenas números")
+        print("Entrada inválida! Por favor, digite apenas numeros")
 else:
     print("Opção inválida! Tente novamente")
 
-def validar_numero(valor):
-    return isinstance(valor, (int, float))
+def validar_numero(val):
+    return isinstance(val, (int, float))
 
 
 def calcular_porcentagem(valor, percentual):
     if not validar_numero(valor) or not validar_numero(percentual):
-        raise TypeError("Valores devem ser numericos")
+        raise TypeError("Valores precisam ser numericos")
     return (valor * percentual) / 100
