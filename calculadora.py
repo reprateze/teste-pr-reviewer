@@ -22,7 +22,7 @@ def multiplicar(x, y):
 
 def dividir(x, y):
     if y == 0:
-        return "Erro: Não é possível dividir"
+        return "Erro: Não foi possível dividir"
     return x / y
 
 print("--- Calculadora Simples ---")
@@ -59,5 +59,5 @@ def validar_numero(valor):
 
 def calcular_porcentagem(valor, percentual):
     if not validar_numero(valor) or not validar_numero(percentual):
-        raise TypeError("Valores devem ser numericos")
+        raise TypeError("Valores precisam ser numericos")
     return (valor * percentual) / 100
