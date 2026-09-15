@@ -4,8 +4,8 @@ def calcular_porcentagem(valor, percentual):
     return (valor * percentual) / 100
 
 
-def validar_numero(valor):
-    return isinstance(valor, (int, float))
+def validar_numero(val):
+    return isinstance(val, (int, float))
 
 def somar(x, y):
     return x + y
