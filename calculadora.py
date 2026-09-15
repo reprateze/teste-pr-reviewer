@@ -59,5 +59,5 @@ def validar_numero(valor):
 
 def calcular_porcentagem(valor, percentual):
     if not validar_numero(valor) or not validar_numero(percentual):
-        raise TypeError("Valores precisam ser numericos")
+        raise TypeError("Valores precisam ser numericos oi")
     return (valor * percentual) / 100
